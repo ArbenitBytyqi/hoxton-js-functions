@@ -1,0 +1,11 @@
+:root {
+    --primary-color: brown;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--primary-color);
+}
