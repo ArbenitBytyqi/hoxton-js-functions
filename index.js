@@ -1,7 +1,5 @@
 /* WRITE THE CODE FOR THE FOLLOWING FUNCTIONS */
 
-const ADULTHOOD_YEAR = 18
-
 // Input: a (number), b (number)
 // Action: Add both numbers together
 // Output: The result (number)
@@ -13,28 +11,38 @@ function add(a, b) {
 // Action: Check if the number given is even or not
 // Output: The result (boolean)
 function isEven(number) {
-    return number % 2 === 0
+    let result = number % 2 === 0
+    if (result === true) {
+        return true
+    } else {
+        return false
+    }
 }
 
 // Input: name (string)
 // Action: Greet the user by name
 // Output: The greeting (string)
 function greet(name) {
-    return `Hello, ${name}!`
+    let greeting = `Hello ${name} !!`
+    return greeting
 }
 
 // Input: age (number)
 // Action: Check if the age is 18 or over
 // Output: The result (boolean)
 function isAnAdult(age) {
-    return age >= ADULTHOOD_YEAR
+    if (age >= 18) {
+        return true
+    } else {
+        return false
+    }
 }
 
 // Input: age (number)
 // Action: Check how many years are left until adulthood (18)
 // Output: The result (number)
-function getYearsToAdulthood(age) {
-    return ADULTHOOD_YEAR - age
+function yearsToAdulthood(age) {
+    return 18 - age
 }
 
 // Input: person ({ age: number, name: string })
@@ -44,12 +52,10 @@ function getYearsToAdulthood(age) {
 //   - if they are not, tell them to come back in X years (when they are) (yearsToAdulthood)
 // Output: The result (string)
 function admit(person) {
-    if (isAnAdult(person.age)) {
-        console.log(greet(person.name))
+    if (person.age >= 18) {
+        let greeting = `Hello ${name} !!`
+        return greeting
     } else {
-        console.log(`Come back in ${getYearsToAdulthood(person.age)} years.`)
+        console.log(`Come back in ${yearsToAdulthood} years.`)
     }
 }
-
-let person = { age: 18, name: 'Amer' }
-admit(person)
